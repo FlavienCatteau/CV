@@ -27,11 +27,11 @@ a{
         display: flex;
         justify-content: center;
         align-items: center;
+        text-align: center;
         width: 72%;
         height: 100%;
         background-color: rgba(57, 188, 197, 0.3);
         color: #FFFFFF;
-        font-size: 2em;
     }
 
 #grandconteneur{
@@ -51,11 +51,16 @@ a{
     .box{
         width: auto;
         text-align: center;
-        background-image: url(assets/img/carbon.jpg);
+        background-color: #3A3E4D;
         color: #FFFFFF;
         padding: 15px;
+        font-weight: bold;
     }
-
+.menucaché{
+    display: flex;
+    flex-flow: column wrap;
+    margin: auto;
+}
 
 .box7{
     width:100%;
@@ -86,15 +91,32 @@ a{
     height: 100px;
     margin-top: 20px;
 }
+.rotate{
+    transition: all 0.2s ease-in-out;
+}
+.zoom{
+    transition: all 0.2s ease-in-out;
+}
 .rotate:hover{
     -webkit-transform: rotate(-15deg);
      transform: rotate(-15deg);
+
 }
 .zoom:hover{
     -webkit-transform: scale(1.2);
 	 transform: scale(1.2);
 }
 
-@@media query {
-
+@media all and (max-width: 800px){
+    .box1 img{
+        display: none;
+    }
+    #conteneur2{
+        display: none;
+    }
+}
+@media all and (min-width: 800px){
+    .menucaché{
+        display: none;
+    }
 }
